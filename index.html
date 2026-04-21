@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MelaminaDesign — Diseñador de Muebles</title>
 <link rel="stylesheet" href="css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -14,55 +13,34 @@
 <div id="wizard" class="wizard-overlay">
   <div class="wizard-panel">
     <div class="wizard-header">
-      <div class="logo-mark">▪ MD</div>
-      <h1>MelaminaDesign</h1>
+      <div class="logo-mark">▪ MD</div><h1>MelaminaDesign</h1>
       <p class="wizard-sub">Diseña, calcula y exporta tus muebles en melamina</p>
     </div>
     <div class="wizard-steps" id="wizard-steps">
       <div class="wizard-step active" data-step="1">
         <h2>¿Qué quieres diseñar?</h2>
         <div class="shape-grid">
-          <button class="shape-card" data-type="mueble-alto" onclick="selectShape(this)">
-            <div class="shape-icon"><svg viewBox="0 0 60 80"><rect x="5" y="5" width="50" height="70" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="5" y1="40" x2="55" y2="40" stroke="currentColor" stroke-width="1.5"/></svg></div>
-            <span>Mueble alto</span><small>Closet, despensa, alacena</small>
-          </button>
-          <button class="shape-card" data-type="mueble-bajo" onclick="selectShape(this)">
-            <div class="shape-icon"><svg viewBox="0 0 80 50"><rect x="5" y="5" width="70" height="40" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="5" y1="27" x2="75" y2="27" stroke="currentColor" stroke-width="1.5"/></svg></div>
-            <span>Mueble bajo</span><small>Cómoda, zapatero, bajo mesada</small>
-          </button>
-          <button class="shape-card" data-type="repisa" onclick="selectShape(this)">
-            <div class="shape-icon"><svg viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="5" y="25" width="70" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="5" y="45" width="70" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-            <span>Repisas</span><small>Estantería flotante</small>
-          </button>
-          <button class="shape-card" data-type="escritorio" onclick="selectShape(this)">
-            <div class="shape-icon"><svg viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="5" y="15" width="24" height="40" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="5" y1="35" x2="29" y2="35" stroke="currentColor" stroke-width="1.5"/></svg></div>
-            <span>Escritorio</span><small>Con o sin cajones</small>
-          </button>
+          <button class="shape-card" data-type="mueble-alto" onclick="selectShape(this)"><div class="shape-icon"><svg viewBox="0 0 60 80"><rect x="5" y="5" width="50" height="70" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="5" y1="40" x2="55" y2="40" stroke="currentColor" stroke-width="1.5"/></svg></div><span>Mueble alto</span><small>Closet, despensa, alacena</small></button>
+          <button class="shape-card" data-type="mueble-bajo" onclick="selectShape(this)"><div class="shape-icon"><svg viewBox="0 0 80 50"><rect x="5" y="5" width="70" height="40" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div><span>Mueble bajo</span><small>Cómoda, zapatero, bajo mesada</small></button>
+          <button class="shape-card" data-type="repisa" onclick="selectShape(this)"><div class="shape-icon"><svg viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="5" y="27" width="70" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div><span>Repisas</span><small>Estantería flotante</small></button>
+          <button class="shape-card" data-type="escritorio" onclick="selectShape(this)"><div class="shape-icon"><svg viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="5" y="15" width="24" height="40" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div><span>Escritorio</span><small>Con o sin cajones</small></button>
         </div>
       </div>
       <div class="wizard-step" data-step="2">
         <h2>¿Cómo va el montaje?</h2>
         <div class="option-list">
-          <button class="option-card selected" data-mount="libre" onclick="selectMount(this)">
-            <div class="opt-icon">□</div>
-            <div><strong>Mueble libre</strong><p>Fondo completo de melamina. Se apoya en el piso.</p></div>
-          </button>
-          <button class="option-card" data-mount="anclaje" onclick="selectMount(this)">
-            <div class="opt-icon">⊞</div>
-            <div><strong>Con anclaje a pared</strong><p>Sin fondo. Incluye rail(es) de melamina traseros para empernarse a la pared.</p></div>
-          </button>
+          <button class="option-card selected" data-mount="libre" onclick="selectMount(this)"><div class="opt-icon">□</div><div><strong>Mueble libre</strong><p>Fondo completo. Se apoya en el piso.</p></div></button>
+          <button class="option-card" data-mount="anclaje" onclick="selectMount(this)"><div class="opt-icon">⊞</div><div><strong>Con anclaje a pared</strong><p>Sin fondo. Rails traseros para empernarse.</p></div></button>
         </div>
-        <div class="anclaje-info" id="anclaje-info" style="display:none">
-          <div class="info-box"><strong>ℹ Anclaje</strong><p>Se agregan rails horizontales de melamina 18mm (8cm de alto) para colgar el mueble en la pared.</p></div>
-        </div>
+        <div class="anclaje-info" id="anclaje-info" style="display:none"><div class="info-box"><strong>ℹ Anclaje</strong><p>Se agregan rails de melamina 18mm (8cm alto) en la parte trasera.</p></div></div>
       </div>
       <div class="wizard-step" data-step="3">
         <h2>Dimensiones del mueble</h2>
-        <p class="step-hint">En centímetros. Puedes modificarlas desde el editor.</p>
+        <p class="step-hint">En centímetros. Modificables desde el editor.</p>
         <div class="dim-form">
-          <div class="dim-row"><label>Ancho</label><div class="dim-input-wrap"><input type="number" id="dim-ancho" value="90" min="20" max="300" oninput="updatePreview()"><span>cm</span></div></div>
-          <div class="dim-row"><label>Alto</label><div class="dim-input-wrap"><input type="number" id="dim-alto" value="200" min="30" max="300" oninput="updatePreview()"><span>cm</span></div></div>
-          <div class="dim-row"><label>Profundidad</label><div class="dim-input-wrap"><input type="number" id="dim-prof" value="45" min="10" max="80" oninput="updatePreview()"><span>cm</span></div></div>
+          <div class="dim-row"><label>Ancho</label><div class="dim-input-wrap"><input type="number" id="dim-ancho" value="90" min="5" max="300" oninput="updatePreview()"><span>cm</span></div></div>
+          <div class="dim-row"><label>Alto</label><div class="dim-input-wrap"><input type="number" id="dim-alto" value="200" min="5" max="300" oninput="updatePreview()"><span>cm</span></div></div>
+          <div class="dim-row"><label>Profundidad</label><div class="dim-input-wrap"><input type="number" id="dim-prof" value="45" min="5" max="100" oninput="updatePreview()"><span>cm</span></div></div>
         </div>
         <div class="dim-preview"><canvas id="preview-canvas" width="220" height="220"></canvas></div>
       </div>
@@ -70,8 +48,8 @@
         <h2>Melamina a usar</h2>
         <div class="option-list">
           <button class="option-card selected" data-thick="18" onclick="selectThick(this)"><div class="opt-icon">◼</div><div><strong>18 mm — Estándar</strong><p>El más usado en Perú.</p></div></button>
-          <button class="option-card" data-thick="15" onclick="selectThick(this)"><div class="opt-icon">◻</div><div><strong>15 mm — Económico</strong><p>Para estantes livianos.</p></div></button>
-          <button class="option-card" data-thick="25" onclick="selectThick(this)"><div class="opt-icon">⬛</div><div><strong>25 mm — Reforzado</strong><p>Alta carga.</p></div></button>
+          <button class="option-card" data-thick="15" onclick="selectThick(this)"><div class="opt-icon">◻</div><div><strong>15 mm — Económico</strong></div></button>
+          <button class="option-card" data-thick="25" onclick="selectThick(this)"><div class="opt-icon">⬛</div><div><strong>25 mm — Reforzado</strong></div></button>
         </div>
         <div class="plancha-selector">
           <h3>Formato de plancha</h3>
@@ -92,6 +70,8 @@
 
 <!-- APP -->
 <div id="app" class="app-hidden">
+
+  <!-- TOPBAR -->
   <header class="topbar">
     <div class="topbar-left">
       <span class="logo-small">▪ MD</span>
@@ -99,22 +79,59 @@
     </div>
     <div class="topbar-center">
       <button class="tb-btn active" id="btn-view-split" onclick="setView('split')">⧉ 2D + 3D</button>
-      <button class="tb-btn" id="btn-view-2d"    onclick="setView('2d')">✏ Solo 2D</button>
-      <button class="tb-btn" id="btn-view-3d"    onclick="setView('3d')">◈ Solo 3D</button>
-      <button class="tb-btn" id="btn-view-cut"   onclick="setView('cut')">⬡ Plan de Corte</button>
+      <button class="tb-btn" id="btn-view-cut" onclick="setView('cut')">⬡ Plan de Corte</button>
     </div>
     <div class="topbar-right">
-      <button class="tb-btn" onclick="openDimPanel()">⇔ Dimensiones</button>
-      <button class="tb-btn accent" onclick="exportPDF()">↓ Exportar PDF</button>
+      <button class="tb-btn accent" onclick="exportPDF()">↓ PDF</button>
       <button class="tb-btn new-btn" onclick="nuevoMueble()">+ Nuevo</button>
     </div>
   </header>
+
+  <!-- BARRA DE MÓDULOS + HERRAMIENTAS -->
+  <div class="module-bar">
+    <!-- Módulo activo -->
+    <span style="font-size:10px;color:#5a5a58;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap">Módulo:</span>
+    <select id="module-selector" onchange="selectActiveModule(this.value)" style="max-width:170px"></select>
+    <button class="add-mod-btn" onclick="addNewModule()" title="Agregar nuevo módulo al canvas">+ Nuevo módulo</button>
+
+    <div style="width:1px;height:20px;background:#2a2a1e;margin:0 8px"></div>
+
+    <!-- Herramientas de ESTRUCTURA -->
+    <span style="font-size:10px;color:#5a5a58;white-space:nowrap">Estructura:</span>
+    <button class="tool-btn active" data-tool="select" onclick="setCurrentTool('select')" title="Seleccionar / mover (V)">
+      <svg width="11" height="11" viewBox="0 0 13 13"><path d="M2 1L2 10L4.5 7.5L6.5 12L8 11.3L6 6.8L10 6.8Z" fill="currentColor"/></svg> Selec.
+    </button>
+    <button class="tool-btn" data-tool="line" onclick="setCurrentTool('line')" title="Trazar división: clic inicio → clic fin (L) — se engancha a bordes automáticamente">
+      <svg width="11" height="11" viewBox="0 0 12 12"><line x1="1" y1="11" x2="11" y2="1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="1" cy="11" r="1.5" fill="currentColor"/><circle cx="11" cy="1" r="1.5" fill="currentColor"/></svg> Línea div.
+    </button>
+
+    <div style="width:1px;height:20px;background:#2a2a1e;margin:0 8px"></div>
+
+    <!-- Herramientas de INSERTAR TABLEROS -->
+    <span style="font-size:10px;color:#5a5a58;white-space:nowrap">Insertar tableros:</span>
+    <button class="tool-btn" data-tool="angle" onclick="setCurrentTool('angle')" title="Insertar ángulo en L — dos tableros en 90° (A)">
+      <svg width="11" height="11" viewBox="0 0 12 12"><path d="M2 2 L2 10 L10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="7.5" width="2.5" height="2.5" fill="none" stroke="currentColor" stroke-width="0.9"/></svg> Ángulo L
+    </button>
+    <button class="tool-btn" data-tool="arc" onclick="setCurrentTool('arc')" title="Insertar tableros en arco/curva (C)">
+      <svg width="11" height="11" viewBox="0 0 12 12"><path d="M1 10 Q6 1 11 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Arco
+    </button>
+
+    <div style="width:1px;height:20px;background:#2a2a1e;margin:0 8px"></div>
+
+    <!-- EXPLOTAR -->
+    <button class="tool-btn" data-tool="explode" onclick="setCurrentTool('explode')" title="Explotar módulo en caras individuales (X)">
+      <svg width="11" height="11" viewBox="0 0 12 12"><rect x="3" y="3" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/><line x1="3" y1="3" x2="1" y2="1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="9" y1="3" x2="11" y2="1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="3" y1="9" x2="1" y2="11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="9" y1="9" x2="11" y2="11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> Explotar
+    </button>
+
+    <div style="flex:1"></div>
+    <span id="st-tool" class="shape-info" style="font-size:10px;color:#5a5a58;max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Seleccionar</span>
+  </div>
 
   <div class="main-layout">
     <!-- LEFT PANEL -->
     <aside class="left-panel">
       <div class="panel-section">
-        <div class="panel-title">Dimensiones</div>
+        <div class="panel-title">Dimensiones (módulo activo)</div>
         <div class="dim-control"><label>Ancho (cm)</label><input type="number" id="ctrl-ancho" oninput="updateDimension('ancho',this.value)"></div>
         <div class="dim-control"><label>Alto (cm)</label><input type="number" id="ctrl-alto" oninput="updateDimension('alto',this.value)"></div>
         <div class="dim-control"><label>Profundidad (cm)</label><input type="number" id="ctrl-prof" oninput="updateDimension('prof',this.value)"></div>
@@ -124,78 +141,61 @@
           </select>
         </div>
       </div>
-
       <div class="panel-section">
         <div class="panel-title">Propiedades</div>
         <div class="prop-toggle"><label>Fondo melamina</label><button class="toggle-pill" id="toggle-fondo" onclick="toggleProp('fondo')">SÍ</button></div>
         <div class="prop-toggle"><label>Rail de anclaje</label><button class="toggle-pill off" id="toggle-rail" onclick="toggleProp('rail')">NO</button></div>
-        <!-- numRails stepper — visible solo cuando conRail=true -->
         <div class="prop-toggle" id="rail-count-row" style="display:none">
-          <label style="font-size:11px;color:#5a5a58;padding-left:10px">Cantidad de rails</label>
+          <label style="font-size:11px;color:#5a5a58;padding-left:10px">Cant. rails</label>
           <div class="div-stepper" style="transform:scale(0.85);transform-origin:right center">
-            <button onclick="changeNumRails(-1)">−</button>
-            <span id="num-rails-display">1</span>
-            <button onclick="changeNumRails(1)">+</button>
+            <button onclick="changeNumRails(-1)">−</button><span id="num-rails-display">1</span><button onclick="changeNumRails(1)">+</button>
           </div>
         </div>
         <div class="prop-toggle"><label>Patas (3cm)</label><button class="toggle-pill off" id="toggle-patas" onclick="toggleProp('patas')">NO</button></div>
       </div>
-
       <div class="panel-section">
         <div class="panel-title">Divisiones verticales</div>
-        <div class="div-count-row">
-          <label>Cantidad</label>
-          <div class="div-stepper">
-            <button onclick="addNDivisions('v',-1)">−</button>
-            <span id="count-div-v">0</span>
-            <button onclick="addNDivisions('v',1)">+</button>
-          </div>
+        <div class="div-count-row"><label>Cantidad</label>
+          <div class="div-stepper"><button onclick="addNDivisions('v',-1)">−</button><span id="count-div-v">0</span><button onclick="addNDivisions('v',1)">+</button></div>
         </div>
-        <p class="hint-small">Distribuidas automáticamente. Arrastra para mover. Clic para ajustar largo.</p>
+        <p class="hint-small">Auto-distribuidas. Arrastra para mover. Clic = editar largo.</p>
         <div id="divisions-list" class="divisions-list"><span class="no-items">Ninguna aún</span></div>
       </div>
-
       <div class="panel-section">
         <div class="panel-title">Estantes horizontales</div>
-        <div class="div-count-row">
-          <label>Cantidad</label>
-          <div class="div-stepper">
-            <button onclick="addNDivisions('h',-1)">−</button>
-            <span id="count-div-h">0</span>
-            <button onclick="addNDivisions('h',1)">+</button>
-          </div>
+        <div class="div-count-row"><label>Cantidad</label>
+          <div class="div-stepper"><button onclick="addNDivisions('h',-1)">−</button><span id="count-div-h">0</span><button onclick="addNDivisions('h',1)">+</button></div>
         </div>
-        <p class="hint-small">Distribuidos automáticamente. Arrastra para mover. Clic para ajustar largo.</p>
+        <p class="hint-small">Auto-distribuidos. Arrastra para mover. Clic = editar largo.</p>
         <div id="shelves-list" class="divisions-list"><span class="no-items">Ninguno aún</span></div>
       </div>
-
       <div class="panel-section" id="selected-panel" style="display:none">
         <div class="panel-title">Elemento seleccionado</div>
         <div id="selected-detail"></div>
       </div>
     </aside>
 
-    <!-- CANVAS AREA -->
+    <!-- CANVAS -->
     <main class="canvas-area" id="canvas-area">
 
       <!-- SPLIT: 2D izq + 3D der -->
       <div class="view-panel active" id="view-split">
         <div class="split-layout">
           <div class="split-half">
-            <div class="split-label">Vista 2D — Plano frontal</div>
+            <div class="split-label">Vista 2D — Rueda=zoom · Alt+drag=pan · Doble clic=agregar</div>
             <div class="canvas-toolbar">
               <button onclick="zoom(1.2)">+</button>
               <span id="zoom-level">100%</span>
               <button onclick="zoom(0.8)">−</button>
-              <button onclick="resetZoom()">↺</button>
+              <button onclick="resetZoom()">↺ Centrar</button>
               <span class="canvas-info" id="canvas-info"></span>
             </div>
             <canvas id="main-canvas" style="display:block"></canvas>
-            <div class="selected-info" id="selected-info">Arrastra divisores · Doble clic para agregar · Clic en elemento para ajustar</div>
+            <div class="selected-info" id="selected-info">Selecciona una herramienta en la barra superior</div>
           </div>
           <div class="split-divider"></div>
           <div class="split-half">
-            <div class="split-label">Vista 3D — Arrastra para rotar</div>
+            <div class="split-label">Vista 3D — Arrastra=rotar · Rueda=zoom</div>
             <div class="canvas-toolbar">
               <button onclick="rotate3D(-15,0)">↶</button>
               <button onclick="rotate3D(15,0)">↷</button>
@@ -208,38 +208,13 @@
         </div>
       </div>
 
-      <!-- SOLO 2D -->
-      <div class="view-panel" id="view-2d">
-        <div class="canvas-toolbar">
-          <button onclick="zoom(1.2)">+</button>
-          <span id="zoom-level-solo">100%</span>
-          <button onclick="zoom(0.8)">−</button>
-          <button onclick="resetZoom()">↺</button>
-          <span class="canvas-info"></span>
-        </div>
-        <canvas id="main-canvas-solo" style="display:block;width:100%;flex:1"></canvas>
-        <div class="selected-info">Arrastra divisores · Doble clic para agregar</div>
-      </div>
-
-      <!-- SOLO 3D -->
-      <div class="view-panel" id="view-3d">
-        <div class="canvas-toolbar">
-          <button onclick="rotate3D(-15,0)">↶ Izq</button>
-          <button onclick="rotate3D(15,0)">↷ Der</button>
-          <button onclick="rotate3D(0,-10)">↑ Arriba</button>
-          <button onclick="rotate3D(0,10)">↓ Abajo</button>
-          <button onclick="reset3D()">↺ Reset</button>
-        </div>
-        <canvas id="canvas-3d-solo" style="display:block;width:100%;flex:1"></canvas>
-      </div>
-
       <!-- PLAN DE CORTE -->
       <div class="view-panel" id="view-cut">
         <div class="canvas-toolbar">
-          <span class="canvas-info">Plan de corte — formato carpintería Perú</span>
-          <button onclick="exportPDF()" style="margin-left:auto;padding:4px 12px;background:#d4a843;color:#111;border:none;border-radius:4px;cursor:pointer;font-size:11px;font-weight:600">↓ PDF</button>
+          <span class="canvas-info">Plan de corte — formato carpintería Perú · Todos los módulos incluidos</span>
+          <button onclick="exportPDF()" style="margin-left:auto;padding:4px 14px;background:#d4a843;color:#111;border:none;border-radius:4px;cursor:pointer;font-size:11px;font-weight:600">↓ Imprimir / PDF</button>
         </div>
-        <div class="cut-plan-wrap" id="cut-plan-wrap">
+        <div class="cut-plan-wrap" id="cut-plan-wrap" style="overflow-y:auto;flex:1;padding:16px">
           <div id="cut-plan-content"></div>
         </div>
       </div>
@@ -253,6 +228,7 @@
           <div class="summary-item"><span>Tipo</span><strong id="sum-type">—</strong></div>
           <div class="summary-item"><span>Montaje</span><strong id="sum-mount">—</strong></div>
           <div class="summary-item"><span>Grosor</span><strong id="sum-thick">18 mm</strong></div>
+          <div class="summary-item"><span>Módulos</span><strong id="sum-modules">1</strong></div>
         </div>
       </div>
       <div class="panel-section highlight">
@@ -260,24 +236,35 @@
         <div class="melamine-calc">
           <div class="calc-big"><span id="calc-planchas">0</span><label>planchas</label></div>
           <div class="calc-detail">
-            <div><span id="calc-area-total">0</span> m² total piezas</div>
+            <div><span id="calc-area-total">0</span> m² total</div>
             <div><span id="calc-area-plancha">0</span> m² por plancha</div>
             <div><span id="calc-desperdicio">0</span>% desperdicio</div>
           </div>
         </div>
-        <div class="plancha-info"><small>Formato: <span id="plancha-format">2150 × 2440 mm</span></small></div>
+        <div class="plancha-info"><small>Formato: <span id="plancha-format">2150×2440mm</span></small></div>
       </div>
       <div class="panel-section">
         <div class="panel-title">Piezas de corte</div>
-        <div id="pieces-list" class="pieces-list"><span class="no-items">Diseña tu mueble para ver las piezas</span></div>
+        <div id="pieces-list" class="pieces-list"><span class="no-items">Diseña para ver las piezas</span></div>
       </div>
       <div class="panel-section">
         <div class="panel-title">Detalle por pieza</div>
         <div id="pieces-detail"></div>
       </div>
       <div class="panel-section">
-        <div class="panel-title">Nota</div>
-        <p class="note-text">Medidas en <strong>cm</strong> en el editor → <strong>mm</strong> en el plan de corte. Descuento de grosor de laterales: <span id="note-grosor">18</span>mm c/u.</p>
+        <div class="panel-title">Atajos</div>
+        <div class="help-grid">
+          <span>V</span><span>Seleccionar</span>
+          <span>L</span><span>Línea división</span>
+          <span>A</span><span>Ángulo en L</span>
+          <span>C</span><span>Arco</span>
+          <span>X</span><span>Explotar</span>
+          <span>Supr</span><span>Eliminar</span>
+          <span>Rueda</span><span>Zoom</span>
+          <span>Alt+drag</span><span>Pan</span>
+          <span>0</span><span>Centrar vista</span>
+        </div>
+        <p class="note-text" style="margin-top:8px">Medidas en <strong>cm</strong> → <strong>mm</strong> en el plan de corte. Descuento: <span id="note-grosor">18</span>mm por lateral.</p>
       </div>
     </aside>
   </div>
@@ -285,6 +272,7 @@
 
 <script src="js/state.js"></script>
 <script src="js/wizard.js"></script>
+<script src="js/dialog.js"></script>
 <script src="js/canvas2d.js"></script>
 <script src="js/canvas3d.js"></script>
 <script src="js/cutplan.js"></script>

@@ -783,3 +783,72 @@ body {
   canvas{max-width:100%!important;page-break-inside:avoid}
   .cut-plan-sheet{page-break-inside:avoid}
 }
+
+/* ══ v6: multi-module, shapes, PDF, 3D zoom ══ */
+.tool-group-shapes{display:flex;gap:3px;border-left:1px solid #2a2a1e;padding-left:8px;margin-left:4px}
+.shape-info{font-size:10px;color:#5a5a58;padding:2px 6px;background:#111110;border:1px solid #1e1e16;border-radius:3px}
+.module-bar{display:flex;align-items:center;gap:6px;padding:4px 14px;background:#0d0d0b;border-bottom:1px solid #1a1a14;font-size:11px}
+.module-bar select{background:#1a1a14;border:1px solid #2a2a1e;color:#d4a843;border-radius:4px;font-size:11px;padding:2px 6px;font-family:var(--font,sans-serif)}
+.module-bar .add-mod-btn{padding:3px 10px;background:none;border:1px solid #d4a843;border-radius:4px;color:#d4a843;font-size:11px;cursor:pointer}
+.module-bar .add-mod-btn:hover{background:#d4a84322}
+
+/* PDF: todo visible */
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  body{background:#fff!important;color:#111!important;margin:0;padding:0}
+  .topbar,.left-panel,.right-panel,.module-bar,
+  #view-split,#view-2d,#view-3d,#view-cut .canvas-toolbar{display:none!important}
+  #view-cut{display:block!important;position:static!important;height:auto!important;overflow:visible!important}
+  .cut-plan-wrap{height:auto!important;overflow:visible!important}
+  #cut-plan-content{height:auto!important;overflow:visible!important}
+  .cut-plan-sheet{page-break-inside:avoid;margin-bottom:24px}
+  .cut-table-section{page-break-after:always}
+  .assembly-section{page-break-before:always}
+  .cut-header,.cut-table td,.cut-table th,.canto-legend,.summary-table td,.summary-table th{background:#fff!important;color:#111!important;border-color:#ccc!important}
+  .cut-table th{background:#f0f0f0!important}
+  .td-canto{color:#1a3a99!important}
+  .td-qty,.sheet-title,.info-table td strong{color:#8a6000!important}
+  canvas{max-width:100%!important;height:auto!important}
+  .cut-footer-note{color:#444!important}
+  .cut-footer-note strong{color:#222!important}
+  .legend-swatch{border:1px solid #ccc!important}
+  h3.sheet-title{font-size:14px!important;margin-top:16px!important}
+}
+
+/* ══ v7: line tool, explode, dialogs, help grid ══ */
+
+/* Help grid in right panel */
+.help-grid{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:11px}
+.help-grid span:nth-child(odd){font-family:monospace;background:#1f2433;border:1px solid #2a3045;border-radius:3px;padding:1px 5px;color:#d4a843;font-size:10px;white-space:nowrap;text-align:center}
+.help-grid span:nth-child(even){color:#8b92a8;line-height:1.8}
+
+/* Toast notification */
+#toast{display:none}
+
+/* Module bar compact */
+.module-bar{display:flex;align-items:center;gap:6px;padding:5px 14px;background:#0d0d0b;border-bottom:1px solid #1a1a14;font-size:11px;flex-wrap:nowrap;overflow-x:auto}
+.module-bar select{background:#1a1a14;border:1px solid #2a2a1e;color:#d4a843;border-radius:4px;font-size:11px;padding:3px 6px}
+.add-mod-btn{padding:3px 10px;background:none;border:1px solid #d4a843;border-radius:4px;color:#d4a843;font-size:11px;cursor:pointer;white-space:nowrap}
+.add-mod-btn:hover{background:#d4a84322}
+.shape-info{font-size:10px;color:#5a5a58;padding:2px 6px;background:#111110;border:1px solid #1e1e16;border-radius:3px;white-space:nowrap}
+
+/* Tool button explode highlight */
+.tool-btn[data-tool="explode"].active{background:#f59e0b;color:#111;border-color:#f59e0b}
+.tool-btn[data-tool="line"].active{background:#facc15;color:#111;border-color:#facc15}
+
+/* View panel flex */
+#view-split,#view-cut{display:none;flex-direction:column;height:100%}
+#view-split.active,#view-cut.active{display:flex}
+
+/* Dialog overlay global reset */
+#dlg-overlay input,#dlg-overlay select{font-family:'Space Grotesk',sans-serif}
+#dlg-overlay label{margin-bottom:3px}
+
+/* ══ v8: cut-row hover, explode mode, notification ══ */
+.cut-row:hover td{background:rgba(255,255,255,0.03)}
+.cut-row td{transition:background .1s}
+#cut-notification{display:none}
+/* Caras explotadas con cursor pointer */
+canvas{cursor:crosshair}
+/* Restore button */
+.restore-btn{font-size:11px;color:#10b981;background:none;border:none;cursor:pointer;text-decoration:underline;padding:0}
